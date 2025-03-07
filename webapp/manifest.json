@@ -68,7 +68,9 @@
         "models": {
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "<uriRelativeToManifest>"
+                "settings": {
+                    "bundleName": "sap.ui.demo.walkthrough.i18n.i18n"
+                }
             },
             "": {
                 "dataSource": "<dataSourceAlias>",

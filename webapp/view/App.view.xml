@@ -6,7 +6,15 @@
     <Text text="Hello UI5! again" />
 
     <Button
-        text="Say Hi"
+        text="{i18n>showHelloButtonText}"
         press=".onShowHello"
+    />
+
+    <Input
+        placeholder="Enter your name"
+        description="Hello {/recipient/name}"
+        value="{/recipient/name}"
+        valueLiveUpdate="true"
+        width="60%"
     />
 </mvc:View>
