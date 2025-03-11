@@ -4,13 +4,14 @@
 	"start_url": "<startUrl>",
 	
     "sap.app": {
-        "id": "<id>",
+        "id": "sap.ui.demo.walkthrough",
         "type": "application",
-        "i18n": "<i18nPathRelativeToManifest>",
+        "i18n": "i18n/i18n.properties",
         "applicationVersion": {
-            "version": "<version>"
+            "version": "1.0.0"
         },
-        "title": "{{<title>}}",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
         "tags": {
             "keywords": [
                 "{{<keyword1>}}", "{{<keyword2>}}"
@@ -50,26 +51,20 @@
             ]
         },
         "dependencies": {
-            "minUI5Version": "<minUI5Version>",
+            "minUI5Version": "1.60.0",
             "libs": {
-                "<ui5lib1>": {                   
-                    "minVersion": "<minVersion1>"
-                },
-                "<ui5lib2>": {                   
-                    "minVersion": "<minVersion2>"
-                }
+                "sap.m": {}
             },
             "components": {
-                "<ui5component1>": {
-                    "minVersion": "<minComp1Version>"
-                }
             }
         },
         "models": {
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "sap.ui.demo.walkthrough.i18n.i18n"
+                    "bundleName": "sap.ui.demo.walkthrough.i18n.i18n",
+                    "supportedLocales": [""],
+                    "fallbackLocale": ""
                 }
             },
             "": {
@@ -77,7 +72,12 @@
                 "settings": {}
             }
         },
-        "rootView": "<rootView>",
+        "rootView": {
+            "viewName": "sap.ui.demo.walkthrough.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "app"
+        },
         "handleValidation": false,
         "config": {
           
